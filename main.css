@@ -3,8 +3,21 @@
   margin: 0;
   font-family: Arial, Helvetica, sans-serif; }
 
+.green {
+  color: #2e7c2e; }
+
+.red {
+  color: #ad2f2f;
+  margin-left: 20px;
+  font-weight: 900; }
+
+.blue {
+  color: #181844;
+  font-weight: 900;
+  border-bottom: 4px solid #181844; }
+
 header {
-  background-color: #150f31;
+  background-color: #0c360c;
   min-height: 70px; }
   header h1 {
     float: left;
@@ -16,11 +29,6 @@ header {
     letter-spacing: -1px;
     font-family: 'Roboto', serif;
     font-weight: 900; }
-    header h1 .green {
-      color: #2e7c2e; }
-    header h1 .red {
-      color: #ad2f2f;
-      margin-left: 20px; }
   header nav {
     float: right;
     height: 70px;
@@ -43,91 +51,105 @@ header {
       color: #acaaaa; }
 
 #main-page {
-  min-height: 600px;
-  background: url("https://cdn.pixabay.com/photo/2018/11/04/21/23/leaves-3794988_1280.jpg");
-  background-position: 100% 100%;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background-color: rgba(133, 245, 133, 0.3); }
+  #main-page h1 {
+    font-size: 50px;
+    padding: 25px 100px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ad2f2f; }
 
 #main-page #container {
-  min-height: 600px;
-  background-color: rgba(51, 145, 51, 0.9); }
-  #main-page #container h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 60px;
-    text-align: center;
-    padding: 30px 0 0;
-    font-weight: 900; }
-  #main-page #container h1::after {
-    content: '';
-    display: block;
-    width: 200px;
-    border-bottom: 5px solid white;
-    margin: auto; }
+  min-height: 700px;
+  width: 1400px;
+  margin: auto; }
   #main-page #container .slider {
-    width: 900px;
-    height: 400px;
-    margin: 30px auto 0;
-    background-color: gray;
+    width: 100%;
+    height: 500px;
     overflow: hidden;
     position: relative; }
-    #main-page #container .slider .slide {
-      height: 100%;
-      float: left; }
-    #main-page #container .slider .slide #left {
-      float: left;
-      width: 350px;
-      height: 100%;
-      background-color: #219621; }
-      #main-page #container .slider .slide #left h2 {
-        color: white;
-        text-align: center;
-        padding: 20px 0; }
-      #main-page #container .slider .slide #left p {
-        color: white;
-        width: 85%;
-        margin: auto; }
-      #main-page #container .slider .slide #left button {
-        border: 2px solid white;
-        outline: none;
-        text-transform: uppercase;
-        background-color: inherit;
-        color: white;
-        width: 170px;
-        padding: 7px 0;
-        display: block;
-        margin: 30px auto 0;
-        font-size: 22px;
-        font-weight: 900;
-        cursor: pointer; }
-      #main-page #container .slider .slide #left button:hover {
-        color: #219621;
-        background-color: white;
-        border-color: #219621; }
-    #main-page #container .slider .slide #right {
-      float: left;
-      width: 550px;
-      height: 100%;
-      background-color: white;
-      position: relative;
-      overflow: hidden; }
-      #main-page #container .slider .slide #right img {
-        width: 100%;
-        height: 100%;
-        transition: transform .5s ease; }
-      #main-page #container .slider .slide #right .bg {
+    #main-page #container .slider .main-box, #main-page #container .slider .other-box {
+      cursor: pointer; }
+      #main-page #container .slider .main-box .box-title, #main-page #container .slider .other-box .box-title {
+        background-color: rgba(31, 29, 29, 0);
         position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
+        transition: background-color .25s linear; }
+    #main-page #container .slider .main-box {
+      width: 600px;
+      height: 100%;
+      float: left;
+      box-sizing: border-box;
+      position: relative;
+      border-right: 6px solid rgba(133, 245, 133, 0.3);
+      overflow: hidden; }
+      #main-page #container .slider .main-box #slide-container {
+        position: absolute;
         left: 0;
         top: 0;
-        z-index: 1;
-        transition: background-color .4s linear; }
-      #main-page #container .slider .slide #right .bg:hover ~ img {
-        transform: scale(1.1); }
-      #main-page #container .slider .slide #right .bg:hover {
-        background-color: rgba(33, 150, 33, 0.6); }
+        width: 3000px;
+        height: 100%; }
+      #main-page #container .slider .main-box .content {
+        width: 600px;
+        height: 100%;
+        float: left;
+        position: sticky; }
+        #main-page #container .slider .main-box .content img {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px 0 0 5px;
+          transition: transform .25s linear; }
+        #main-page #container .slider .main-box .content:hover img {
+          transform: rotate(5deg) scale(1.2); }
+        #main-page #container .slider .main-box .content:hover .box-title {
+          background-color: rgba(133, 245, 133, 0.3); }
+    #main-page #container .slider .another-box {
+      float: left;
+      width: 800px;
+      height: 100%; }
+    #main-page #container .slider .other-box {
+      width: 400px;
+      height: 50%;
+      float: left;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden; }
+      #main-page #container .slider .other-box img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 5px 5px 0;
+        transition: transform .25s linear; }
+      #main-page #container .slider .other-box:nth-child(odd) {
+        border-right: 6px solid rgba(133, 245, 133, 0.3); }
+        #main-page #container .slider .other-box:nth-child(odd) img {
+          border-radius: 0; }
+      #main-page #container .slider .other-box .box-title {
+        background-color: rgba(31, 29, 29, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: background-color .25s linear; }
+      #main-page #container .slider .other-box:hover .box-title {
+        background-color: rgba(133, 245, 133, 0.3); }
+      #main-page #container .slider .other-box:hover img {
+        transform: rotate(5deg) scale(1.2); }
+      #main-page #container .slider .other-box h2 {
+        color: white;
+        width: 90%;
+        padding-top: 130px;
+        font-size: 28px;
+        margin: auto; }
+        #main-page #container .slider .other-box h2::before {
+          content: '';
+          display: block;
+          width: 200px;
+          border-bottom: 2px solid white;
+          margin-top: 5px; }
   #main-page #container .point {
     position: absolute;
     bottom: 10px;
@@ -150,18 +172,18 @@ header {
   justify-content: center;
   align-items: center;
   height: 110px;
-  background-color: #256825; }
+  background-color: rgba(133, 245, 133, 0.3); }
   #info .about h1 {
     width: 300px;
     font-size: 40px;
-    color: white;
+    color: #0c360c;
     font-weight: 900;
     text-align: center; }
   #info .about h1::after {
     content: '';
     display: block;
     width: 200px;
-    border-bottom: 2px solid white; }
+    border-bottom: 2px solid #0c360c; }
   #info .about img {
     float: left;
     display: block;
@@ -173,15 +195,14 @@ header {
   min-height: 700px;
   background-color: rgba(133, 245, 133, 0.3); }
   #info .main-content {
-    width: 50%;
-    float: left;
-    margin-top: 20px; }
+    margin-top: 80px; }
     #info .main-content p {
       box-sizing: border-box;
-      color: black;
+      color: #051f05;
+      font-weight: 500;
       padding: 0 30px;
       margin: 0 auto 0;
-      width: 85%;
+      width: 850px;
       border-right: 4px solid #219621;
       border-top: 4px solid #c02e2e;
       border-radius: 0 15px 0 0; }
@@ -203,28 +224,95 @@ header {
       border-radius: 0 0 15px 0;
       border-bottom: 4px solid #c02e2e;
       padding-bottom: 20px; }
-  #info .picture {
-    width: 50%;
-    float: left; }
-    #info .picture img {
-      width: 500px;
-      display: block;
-      margin: 90px auto 0;
-      border-radius: 30px 60px 27px 30px;
-      border: 4px solid #219621; }
 
 #services {
   min-height: 800px;
   background-color: rgba(133, 245, 133, 0.3); }
+  #services h1 {
+    text-align: right;
+    font-size: 50px;
+    padding: 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-right: 140px; }
 
 #services #content {
-  padding-top: 30px;
+  padding-top: 20px;
   text-align: center; }
   #services #content .service {
     display: inline-block;
-    width: 30%;
-    height: 360px;
-    background-color: blue; }
+    width: 25%;
+    height: 320px;
+    vertical-align: top;
+    margin: 0 20px; }
+    #services #content .service img {
+      width: 110px;
+      display: block;
+      margin: auto; }
+    #services #content .service h2 {
+      color: #125c12;
+      padding: 10px 0;
+      text-transform: uppercase; }
+      #services #content .service h2::after {
+        content: '';
+        display: block;
+        width: 0;
+        border-bottom: 3px solid #125c12;
+        margin-left: 100px;
+        transition: width .25s linear; }
+    #services #content .service:hover h2::after {
+      width: 80px; }
+    #services #content .service p {
+      width: 95%;
+      margin: auto;
+      color: #125c12; }
+
+#contact {
+  position: fixed;
+  bottom: -115px;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  transition: bottom .4s linear; }
+  #contact.showForm {
+    bottom: 0; }
+  #contact #hide {
+    text-align: right;
+    margin-right: 170px; }
+    #contact #hide button {
+      background-color: #46eb46;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      width: 130px;
+      height: 25px;
+      border-radius: 10px 10px 0 0; }
+  #contact form {
+    background-color: #46eb46;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box; }
+    #contact form input, #contact form button {
+      vertical-align: top; }
+  #contact form input {
+    font-size: 26px;
+    border: 2px solid #083d08;
+    background-color: #79ee79;
+    padding: 0 20px;
+    outline: none;
+    height: 50px;
+    box-sizing: border-box; }
+  #contact form button {
+    width: 180px;
+    outline: none;
+    border: 2px solid #083d08;
+    color: #083d08;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 900;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer; }
 
 @media screen and (max-width: 900px) and (min-width: 681px) {
   header h1 {
