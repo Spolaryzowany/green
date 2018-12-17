@@ -1,6 +1,6 @@
-$mainColor: rgba(133, 245, 133, 0.3);
-$headerColor: rgb(12, 54, 12);
-
+$mainColor: black;
+$headerColor: black;
+$formColor: rgb(34, 31, 31);
 
 *{
     padding: 0;
@@ -36,17 +36,17 @@ header{
         width: 30%;
         line-height: 2.2;
         padding-left: 60px;
-        border-bottom: 4px solid rgb(192, 46, 46);
         letter-spacing: -1px;
         font-family: 'Roboto', serif;
         font-weight: 900;
+        border-bottom: 2px solid black;
     }
 
     nav{
         float: right;
         height: 70px;
         width: calc(70% - 60px);
-        border-bottom: 4px solid rgb(33, 150, 33);
+        border-bottom: 2px solid yellow;
 
         ul{
             margin-right: 150px;
@@ -73,18 +73,18 @@ header{
 
 #main-page{
     background-color: $mainColor;
+    min-height: 700px;
 
-    h1{
-        font-size: 50px;
-        padding: 25px 100px;
-        font-weight: 900;
-        text-transform: uppercase;
-        color: rgb(173, 47, 47);
+    #pictures{
+        text-align: center;
+    }
+
+    #pictures .picture{
+        padding: 20px 0;
     }
 }
 
 #main-page #container{
-    min-height: 700px;
     width: 1400px;
     margin: auto;
 
@@ -143,7 +143,7 @@ header{
                 }
     
                 &:hover .box-title{
-                    background-color: $mainColor;
+                    background-color: rgba(32, 29, 29, 0.56);
                 }
             }
         }
@@ -186,7 +186,7 @@ header{
             }
 
             &:hover .box-title{
-                background-color: $mainColor;
+                background-color: rgba(32, 29, 29, 0.56);
             }
 
             &:hover img{
@@ -232,81 +232,12 @@ header{
     }
 }
 
-#info .about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 110px;
-    background-color: $mainColor;
-
-    h1{
-        width: 300px;
-        font-size: 40px;
-        color: rgb(12, 54, 12);
-        font-weight: 900;
-        text-align: center;
-    }
-
-    h1::after{
-        content: '';
-        display: block;
-        width: 200px;
-        border-bottom: 2px solid rgb(12, 54, 12);
-    }
-
-    img{
-        float: left;
-        display: block;
-        width: 220px;
-        height: 130px;
-        margin-left: -40px;
-    }
-}
-
 #info{
     min-height: 700px;
-    background-color: rgba(133, 245, 133, 0.3);
+    background-color: $mainColor;
 
     .main-content{
-        margin-top: 80px;
-
-        p{
-            box-sizing: border-box;
-            color: rgb(5, 31, 5);
-            font-weight: 500;
-            padding: 0 30px;
-            margin: 0 auto 0;
-            width: 850px;
-            border-right: 4px solid rgb(33, 150, 33);
-            border-top: 4px solid rgb(192, 46, 46);
-            border-radius: 0 15px 0 0;
-        }
-
-        p:first-child{
-            padding-top: 20px;
-        }
-
-        p:nth-child(2){
-            border-top: none;
-            border-radius: unset;
-
-            &::after, &::before{
-                content: '';
-                display: block;
-                margin: 20px auto;
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                background-color: rgb(33, 150, 33);
-            }
-        }
-
-        p:last-child{
-            border-top: none;
-            border-radius: 0 0 15px 0;
-            border-bottom: 4px solid rgb(192, 46, 46);
-            padding-bottom: 20px;
-        }
+        
     }
 }
 
@@ -385,7 +316,7 @@ header{
         margin-right: 170px;
 
         button{
-            background-color: rgb(70, 235, 70);
+            background-color: $formColor;
             border: none;
             outline: none;
             cursor: pointer;
@@ -393,40 +324,56 @@ header{
             height: 25px;
             border-radius: 10px 10px 0 0;
         }
+
+        button i{
+            color: yellow;
+            font-size: 20px;
+        }
     }
 
     form{
-        background-color: rgb(70, 235, 70);
+        background-color: $formColor;
         text-align: center;
-        padding: 20px 0;
+        padding: 10px 0;
         box-sizing: border-box;
 
         input,button{
             vertical-align: top;
         }
+
+        span{
+            color: yellow;
+            line-height: 2.5;
+            font-size: 20px;
+            font-weight: 900;
+            margin-right: 50px;
+        }
     }
 
     form input{
-        font-size: 26px;
-        border: 2px solid rgb(8, 61, 8);
-        background-color: rgb(121, 238, 121);
+        font-size: 20px;
+        border: 1px solid yellow;
+        background-color: darken($formColor, 10);
         padding: 0 20px;
         outline: none;
         height: 50px;
         box-sizing: border-box;
+        color: white;
+        margin: 0 10px;
     }
 
     form button{
         width: 180px;
         outline: none;
-        border: 2px solid rgb(8, 61, 8);
-        color: rgb(8, 61, 8);
+        border: 1px solid yellow;
+        color: yellow;
         text-transform: uppercase;
-        font-size: 28px;
-        font-weight: 900;
+        font-size: 20px;
         height: 50px;
         box-sizing: border-box;
         cursor: pointer;
+        background: black;
+        letter-spacing: 5px;
     }
 }
 
