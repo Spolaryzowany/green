@@ -166,8 +166,59 @@ header {
       cursor: pointer; }
 
 #info {
-  min-height: 700px;
+  min-height: 600px;
   background-color: black; }
+  #info .main-content {
+    width: 1400px;
+    margin: auto; }
+    #info .main-content #left, #info .main-content #right {
+      float: left;
+      width: 50%;
+      text-align: center; }
+      #info .main-content #left h1, #info .main-content #right h1 {
+        font-size: 32px;
+        color: white;
+        text-align: center;
+        padding: 0 0 40px;
+        font-weight: 900; }
+        #info .main-content #left h1::after, #info .main-content #right h1::after {
+          display: block;
+          content: '';
+          width: 150px;
+          border-bottom: 2px solid red;
+          margin: auto;
+          margin-top: 10px; }
+      #info .main-content #left .news, #info .main-content #right .news {
+        padding: 20px 0; }
+      #info .main-content #left .news img, #info .main-content #right .news img {
+        vertical-align: top;
+        width: 100px;
+        height: 50px; }
+      #info .main-content #left .news p, #info .main-content #right .news p {
+        text-align: left;
+        vertical-align: top;
+        display: inline-block;
+        margin-left: 20px;
+        width: 60%;
+        color: white;
+        font-weight: 900; }
+
+#day {
+  background-color: black;
+  height: 1000px; }
+  #day img {
+    width: 800px;
+    display: block;
+    margin: auto; }
+  #day p {
+    width: 900px;
+    margin: auto;
+    color: white;
+    padding-top: 50px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    text-align: center; }
 
 #services {
   min-height: 800px;
