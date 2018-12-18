@@ -10,7 +10,7 @@ $formColor: rgb(34, 31, 31);
 
 
 .green{
-    color: rgb(46, 124, 46);
+    color: #1F567C;
 }
 
 .red{
@@ -233,7 +233,7 @@ header{
 }
 
 #info{
-    min-height: 600px;
+    min-height: 700px;
     background-color: $mainColor;
 
     .main-content{
@@ -244,6 +244,7 @@ header{
             float: left;
             width: 50%;
             text-align: center;
+            padding-bottom: 70px;
 
             h1{
                 font-size: 32px;
@@ -282,6 +283,20 @@ header{
                 font-weight: 900;
             }
         }
+
+        h3{
+            color: red;
+            padding: 20px 40px;
+            clear: both;
+            width: 400px;
+            background-color: white;
+            text-transform: uppercase;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 2px;
+            box-shadow: 5px 5px 0 0 red;
+            font-weight: 700;
+            font-size: 20px;
+        }
     }
 }
 
@@ -289,21 +304,60 @@ header{
     background-color: $mainColor;
     height: 1000px;
 
-    img{
-        width: 800px;
-        display: block;
-        margin: auto;
+    #left{
+        width: 50%;
+        float: left;
+
+        img{
+            width: 80%;
+            display: block;
+            margin: auto;
+        }
+    
+        p{
+            width: 95%;
+            margin: auto;
+            color: white;
+            padding-top: 50px;
+            font-size: 20px;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 1px;
+            text-align: center;
+        }
     }
 
-    p{
-        width: 900px;
-        margin: auto;
-        color: white;
-        padding-top: 50px;
-        font-size: 20px;
-        font-family: 'Raleway', sans-serif;
-        letter-spacing: 1px;
-        text-align: center;
+    #right{
+        float: left;
+        width: 50%;
+
+        a{
+            display: block;
+            margin: auto;
+            width: 80%;
+        }
+
+        ul{
+            width: 70%;
+            margin: auto;
+            padding: 50px 0 20px;
+            border-bottom: 2px solid #1F567C;
+        }
+
+        ul li{
+            color: #1F567C;
+            padding: 5px 0;
+            font-family: 'Raleway', sans-serif;
+            cursor: pointer;
+
+            span{
+                color: white;
+                font-size: 14px;
+            }
+
+            &:hover span{
+                color: rgb(133, 177, 209);
+            }
+        }
     }
 }
 

@@ -4,7 +4,7 @@
   font-family: Arial, Helvetica, sans-serif; }
 
 .green {
-  color: #2e7c2e; }
+  color: #1F567C; }
 
 .red {
   color: #ad2f2f;
@@ -166,7 +166,7 @@ header {
       cursor: pointer; }
 
 #info {
-  min-height: 600px;
+  min-height: 700px;
   background-color: black; }
   #info .main-content {
     width: 1400px;
@@ -174,7 +174,8 @@ header {
     #info .main-content #left, #info .main-content #right {
       float: left;
       width: 50%;
-      text-align: center; }
+      text-align: center;
+      padding-bottom: 70px; }
       #info .main-content #left h1, #info .main-content #right h1 {
         font-size: 32px;
         color: white;
@@ -202,23 +203,60 @@ header {
         width: 60%;
         color: white;
         font-weight: 900; }
+    #info .main-content h3 {
+      color: red;
+      padding: 20px 40px;
+      clear: both;
+      width: 400px;
+      background-color: white;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 2px;
+      box-shadow: 5px 5px 0 0 red;
+      font-weight: 700;
+      font-size: 20px; }
 
 #day {
   background-color: black;
   height: 1000px; }
-  #day img {
-    width: 800px;
-    display: block;
-    margin: auto; }
-  #day p {
-    width: 900px;
-    margin: auto;
-    color: white;
-    padding-top: 50px;
-    font-size: 20px;
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: 1px;
-    text-align: center; }
+  #day #left {
+    width: 50%;
+    float: left; }
+    #day #left img {
+      width: 80%;
+      display: block;
+      margin: auto; }
+    #day #left p {
+      width: 95%;
+      margin: auto;
+      color: white;
+      padding-top: 50px;
+      font-size: 20px;
+      font-family: 'Raleway', sans-serif;
+      letter-spacing: 1px;
+      text-align: center; }
+  #day #right {
+    float: left;
+    width: 50%; }
+    #day #right a {
+      display: block;
+      margin: auto;
+      width: 80%; }
+    #day #right ul {
+      width: 70%;
+      margin: auto;
+      padding: 50px 0 20px;
+      border-bottom: 2px solid #1F567C; }
+    #day #right ul li {
+      color: #1F567C;
+      padding: 5px 0;
+      font-family: 'Raleway', sans-serif;
+      cursor: pointer; }
+      #day #right ul li span {
+        color: white;
+        font-size: 14px; }
+      #day #right ul li:hover span {
+        color: #85b1d1; }
 
 #services {
   min-height: 800px;
